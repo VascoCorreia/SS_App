@@ -58,6 +58,15 @@ class CanvasView(context : Context) : View(context) {
 
     }
 
+    public fun resetBitmap()
+    {
+        extraBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        extraCanvas = Canvas(extraBitmap)
+        extraCanvas.drawColor(backgroundColor)
+        extraCanvas.drawBitmap(extraBitmap, 0f, 0f, null)
+        extraCanvas.drawPath(path, paint)
+    }
+
     override fun onDraw(canvas: Canvas) {
         // Draw the bitmap that has the saved path.
         canvas.drawBitmap(extraBitmap, 0f, 0f, null)

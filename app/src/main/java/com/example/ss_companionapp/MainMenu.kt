@@ -20,7 +20,7 @@ class MainMenu : AppCompatActivity() {
 
     fun clickForge(view: View) {
         // startActivity(Intent(this, DrawTheRune::class.java))
-        startActivity(Intent(this, RuneDrawing::class.java))
+        startActivity(Intent(this, DrawingScreen::class.java))
     }
 
     fun clickColl(view: View) {
