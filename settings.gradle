@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "SS_RuneInventory"
+rootProject.name = "SS_CompanionApp"

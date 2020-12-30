@@ -1,4 +1,4 @@
-package com.example.ss_runeinventory
+package com.example.ss_companionapp
 
 import org.junit.Test
 

@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bckgrsplash">#0c051e</color>
     <color name="bckgrsplashlight">#aba9a5</color>
+    <color name="colorBackground">#FFFF5500</color>
+    <color name="colorPaint">#FFFFEB3B</color>
 </resources>

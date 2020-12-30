@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SS_RuneInventory</string>
+    <string name="app_name">SS_CompanionApp</string>
     <string name="rune_id">Rune ID</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
@@ -13,4 +13,6 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="canvasContentDescription">Draw your rune in here.</string>
+
 </resources>

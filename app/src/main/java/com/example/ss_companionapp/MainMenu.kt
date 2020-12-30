@@ -1,10 +1,9 @@
-package com.example.ss_runeinventory
+package com.example.ss_companionapp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 
 class MainMenu : AppCompatActivity() {
 
@@ -20,7 +19,8 @@ class MainMenu : AppCompatActivity() {
     }
 
     fun clickForge(view: View) {
-        startActivity(Intent(this, DrawTheRune::class.java))
+        // startActivity(Intent(this, DrawTheRune::class.java))
+        startActivity(Intent(this, RuneDrawing::class.java))
     }
 
     fun clickColl(view: View) {

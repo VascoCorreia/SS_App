@@ -1,4 +1,4 @@
-package com.example.ss_runeinventory
+package com.example.ss_companionapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.example.ss_runeinventory
+package com.example.ss_companionapp
 
 import android.view.LayoutInflater
 import android.view.View

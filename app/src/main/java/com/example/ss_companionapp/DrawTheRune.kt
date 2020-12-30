@@ -1,11 +1,11 @@
-package com.example.ss_runeinventory
+package com.example.ss_companionapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class RuneCollection : AppCompatActivity() {
+class DrawTheRune : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rune_collection)
+        setContentView(R.layout.activity_draw_the_rune)
     }
 }

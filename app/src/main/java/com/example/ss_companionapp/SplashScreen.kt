@@ -1,11 +1,9 @@
-package com.example.ss_runeinventory
+package com.example.ss_companionapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.WindowManager
 import android.content.Intent
-import android.widget.ProgressBar
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {
