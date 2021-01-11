@@ -14,7 +14,7 @@ class CanvasView(context : Context) : View(context) {
     private val drawColor = ResourcesCompat.getColor(resources, R.color.black, null)
     private val backgroundColor = ResourcesCompat.getColor(resources, R.color.white, null)
     private lateinit var extraCanvas: Canvas
-    private lateinit var extraBitmap: Bitmap
+    public lateinit var extraBitmap: Bitmap
     private lateinit var frame: Rect
 
     // Set up the paint with which to draw.
