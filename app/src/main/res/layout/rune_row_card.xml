@@ -8,12 +8,15 @@
     android:focusable="auto"
     android:foreground="?selectableItemBackground"
     app:cardCornerRadius="10dp"
-    app:cardElevation="3dp">
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#74FFFFFF"
+   >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
 
         <TextView
             android:id="@+id/textView"
@@ -21,6 +24,7 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:text="Ability Power Rune"
+            android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,11 +54,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/divider2"
             android:layout_toRightOf="@+id/imageView3"
-            android:paddingLeft="24dp"
+            android:paddingLeft="20dp"
             android:paddingTop="15dp"
             android:paddingBottom="5dp"
             android:text="TextView"
-            android:textColor="#4BCC50"
+            android:textColor="#146717"
             android:textSize="18sp" />
 
         <TextView
@@ -64,10 +68,10 @@
             android:layout_below="@+id/statIncrease1"
             android:layout_marginLeft="0dp"
             android:layout_toRightOf="@+id/imageView3"
-            android:paddingLeft="24dp"
+            android:paddingLeft="20dp"
             android:paddingBottom="5dp"
             android:text="TextView"
-            android:textColor="#4BCC50"
+            android:textColor="#146717"
             android:textSize="18sp" />
 
         <TextView
@@ -77,10 +81,10 @@
             android:layout_below="@+id/statIncrease2"
             android:layout_marginLeft="0dp"
             android:layout_toRightOf="@+id/imageView3"
-            android:paddingLeft="24dp"
+            android:paddingLeft="20dp"
             android:paddingBottom="5dp"
             android:text="TextView"
-            android:textColor="#E31E1E"
+            android:textColor="#4A0404"
             android:textSize="18sp" />
 
         <TextView
@@ -90,10 +94,10 @@
             android:layout_below="@+id/statDecrease1"
             android:layout_marginLeft="0dp"
             android:layout_toRightOf="@+id/imageView3"
-            android:paddingLeft="24dp"
+            android:paddingLeft="20dp"
             android:paddingBottom="5dp"
             android:text="TextView"
-            android:textColor="#E31E1E"
+            android:textColor="#4A0404"
             android:textSize="18sp" />
 
 

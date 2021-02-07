@@ -1,7 +1,7 @@
 package com.example.ss_companionapp
 
 import android.content.Context
-import android.content.DialogInterface
+import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
@@ -10,16 +10,13 @@ import android.os.Environment
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RelativeLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
-import java.util.*
 
 class DrawingScreen : AppCompatActivity() {
 
@@ -42,7 +39,7 @@ class DrawingScreen : AppCompatActivity() {
         paramsClear.addRule(RelativeLayout.ALIGN_PARENT_LEFT)
         button_save.layoutParams = params
         button_clear.layoutParams = paramsClear
-        button_save.text = "SAVE"
+        button_save.text = "OK"
         button_clear.text = "CLEAR"
         // add Button to LinearLayout
         mylayout.addView(button_save)
@@ -57,25 +54,16 @@ class DrawingScreen : AppCompatActivity() {
 
         }
         button_save.setOnClickListener {
-            val builder: AlertDialog.Builder? = this?.let {
-                AlertDialog.Builder(this)
-            }
-            builder?.setMessage("Choose the stats you want to affect")
-                    ?.setTitle("Configure your rune")
-            val dialog: AlertDialog? = builder?.create()
-            val alertDialog: AlertDialog? = this?.let {
-                val builder = AlertDialog.Builder(this)
-                builder.apply {
-                    setPositiveButton("Save",
-                            DialogInterface.OnClickListener { dialog, id ->
-                                val uri: Uri = saveImageToExternalStorage(myCanvasView.extraBitmap)
-                            })
-                    setNegativeButton("Cancel",
-                            DialogInterface.OnClickListener { dialog, id ->
-                            })
-                }
-                builder.create()
-            }
+
+            //val uri: Uri = saveImageToExternalStorage(myCanvasView.extraBitmap)
+            val bitmapName: String = "bitmap.png"
+            val stream = openFileOutput(bitmapName, Context.MODE_PRIVATE)
+            myCanvasView.extraBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+            stream.close()
+            val in1:Intent = Intent(this, RuneConfigurator::class.java)
+            in1.putExtra("img", bitmapName)
+            startActivity(in1)
+
         }
     }
 
@@ -91,14 +79,13 @@ class DrawingScreen : AppCompatActivity() {
 
             try {
                 val stream: OutputStream = FileOutputStream(file)
-
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
                 stream.flush()
                 stream.close()
-                toast("Rune added!")
-            } catch (e: IOException){ // Catch the exception
+                toast("Rune created!")
+            } catch (e: IOException){
                 e.printStackTrace()
-                toast("An error occured. Please, try again.")
+                toast("An error occurred. Please, try again.")
             }
             return Uri.parse(file.absolutePath)
         }

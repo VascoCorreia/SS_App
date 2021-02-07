@@ -1,2 +1,3 @@
+include ':mysql-connector-java-5.1.49'
 include ':app'
 rootProject.name = "SS_CompanionApp"

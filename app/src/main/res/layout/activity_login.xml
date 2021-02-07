@@ -9,55 +9,87 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/bckgr"
     tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewuser"
+        android:layout_width="367dp"
+        android:layout_height="73dp"
+        android:background="@drawable/username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
+
 
     <EditText
         android:id="@+id/loginPage_username"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/prompt_email"
-        android:inputType="textEmailAddress"
+        android:layout_width="323dp"
+        android:layout_height="48dp"
+        android:autofillHints="username"
+        android:background="@android:color/transparent"
+        android:hint="username"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionDone"
+        android:inputType="text"
         android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewuser"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewuser"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="@+id/imageViewuser"
+        app:layout_constraintTop_toTopOf="@+id/imageViewuser"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <ImageView
+        android:id="@+id/imageViewpass"
+        android:layout_width="370dp"
+        android:layout_height="68dp"
+        android:background="@drawable/username"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="@string/prompt_email"/>
+        app:layout_constraintVertical_bias="0.453" />
 
     <EditText
         android:id="@+id/loginPage_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/prompt_password"
+        android:layout_width="323dp"
+        android:layout_height="48dp"
+        android:autofillHints="@string/prompt_password"
+        android:background="@android:color/transparent"
+        android:hint="password"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPage_username"
-        android:autofillHints="@string/prompt_password"/>
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewpass"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewpass"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toStartOf="@+id/imageViewpass"
+        app:layout_constraintTop_toTopOf="@+id/imageViewpass"
+        app:layout_constraintVertical_bias="0.6" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="174dp"
+        android:layout_height="96dp"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
-        android:text="@string/action_sign_in_short"
+        android:background="@drawable/login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginPage_password"
-        app:layout_constraintVertical_bias="0.675" />
+        app:layout_constraintVertical_bias="0.933" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

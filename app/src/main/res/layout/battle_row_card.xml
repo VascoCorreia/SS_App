@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:clickable="true"
+    android:focusable="auto"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#74FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/battleOutcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Battle"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/battleOutcome"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/user1"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/user2"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="193dp"
+            android:layout_marginRight="193dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/vs"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginRight="-1dp"
+            android:layout_toEndOf="@+id/user1"
+            android:layout_toRightOf="@+id/user1"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="24dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="VS"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/vs"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/battleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider3"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginRight="-1dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="DAATE"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+
+        <!-- <TextView
+             android:id="@+id/outcome"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/statIncrease2"
+             android:layout_marginLeft="0dp"
+             android:layout_toRightOf="@+id/imageView3"
+             android:paddingLeft="24dp"
+             android:paddingBottom="5dp"
+             android:text="TextView"
+             android:textColor="#E31E1E"
+             android:textSize="18sp" />
+
+         <TextView
+             android:id="@+id/date"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/statDecrease1"
+             android:layout_marginLeft="0dp"
+             android:layout_toRightOf="@+id/imageView3"
+             android:paddingLeft="24dp"
+             android:paddingBottom="5dp"
+             android:text="TextView"
+             android:textColor="#E31E1E"
+             android:textSize="18sp" />-->
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenu">
+    tools:context=".MainMenu"
+    android:background="@drawable/backgrmenu">
 
     <Button
         android:id="@+id/textToInv"
@@ -13,33 +14,35 @@
         android:layout_marginBottom="115dp"
         android:background="@android:color/transparent"
         android:color="#66FF0000"
-        android:text="MY RUNES"
         android:gravity="end"
+        android:onClick="clickColl"
+        android:text="MY RUNES"
         android:textAlignment="textEnd"
-        android:textColor="@android:color/black"
+        android:textColor="#FFFFFF"
+        android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="@+id/toMyRunes"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:onClick="clickColl"/>
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/textToHistory"
         android:layout_width="270dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="120dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="115dp"
         android:background="@android:color/transparent"
         android:color="#66FF0000"
         android:gravity="start"
         android:onClick="clickHist"
         android:text="BATTLE HISTORY"
         android:textAlignment="textStart"
-        android:textColor="@android:color/black"
+        android:textColor="#FFFFFF"
+        android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="@+id/toBattleHistory"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -48,27 +51,27 @@
         android:id="@+id/toForgeRunes"
         android:layout_width="412dp"
         android:layout_height="102dp"
+        android:background="@drawable/forgerunes"
+        android:onClick="clickForge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802"
-        android:src="@drawable/forgerunes"
-        android:onClick="clickForge"/>
+        app:layout_constraintVertical_bias="0.909" />
 
     <ImageButton
         android:id="@+id/toMyRunes"
-        android:layout_width="272dp"
-        android:layout_height="115dp"
-        android:src="@drawable/runecoll"
+        android:layout_width="233dp"
+        android:layout_height="116dp"
+        android:background="@drawable/runecoll"
+        android:onClick="clickColl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.454"
-        android:onClick="clickColl"/>
+        app:layout_constraintVertical_bias="0.565" />
 
     <Switch
         android:id="@+id/soundCtrl"
@@ -83,30 +86,19 @@
         app:layout_constraintVertical_bias="0.977"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
-        android:id="@+id/toBattleHistory"
-        android:layout_width="272dp"
-        android:layout_height="115dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112"
-        android:src="@drawable/historyimg"
-        android:onClick="clickHist"/>
 
     <ImageButton
-        android:id="@+id/toProfile"
-        android:layout_width="56dp"
-        android:layout_height="47dp"
+        android:id="@+id/toBattleHistory"
+        android:layout_width="233dp"
+        android:layout_height="115dp"
+        android:background="@drawable/historyimg"
+        android:onClick="clickHist"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        android:src="@drawable/avataricon" />
+        app:layout_constraintVertical_bias="0.224" />
 
     <Button
         android:id="@+id/textToForge"
@@ -115,7 +107,8 @@
         android:background="@android:color/transparent"
         android:color="#66FF0000"
         android:text="FORGE RUNES"
-        android:textColor="@android:color/black"
+        android:textColor="#FFFFFF"
+        android:textSize="23dp"
         app:layout_constraintBottom_toTopOf="@+id/toForgeRunes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
